@@ -1,0 +1,64 @@
+ EXERCÍCIOS DE SELEÇÃO
+
+1)  Qual é a saída dos seguintes comandos
+    console.log(!10) // false
+    console.log(!!"String") // true
+    console.log(!!2.3) // true
+    console.log(Boolean(null)) // false
+
+2)  Qual é a saída das seguintes instruções
+    console.log(10 > 2) // true
+    console.log(5 >= "5") // true
+    console.log(5 >== "5") // true
+    console.log("apple" > "pineapple") // false
+    console.log("2" > "12") // true
+    console.log(undefined == null) // true
+    console.log(undefined === null) // false
+    console.log(null == "\n0\n") // false
+    console.log(null === +"\n0\n") // false
+
+3)
+    let valorA = Number(prompt("Digite um valor A"))
+    console.log(`Entrada: ${valorA}`)
+    if(valorA > 10){alert("O valor A é maior que 10")}
+    if(valorA > 10){console.log(`Saída: O valor A é maior que 10\nPrograma Finalizado...`)}
+    if(valorA < 10){console.log(`Programa finalizado...`)}
+
+4) 
+    let numero = Number(prompt("Digite um número"))
+    console.log(`Entrada: ${numero}`)
+    if(numero % 2 == 0){console.log(`Saída: ${(numero /2)}`)}
+    console.log("Programa finalizado...")
+
+5)
+    let numero = Number(prompt("Digite um número"))
+    console.log(`Entrada: ${numero}`)
+    if(numero % 2 == 0){console.log(`Saída: ${(numero /2)}, o número é par`)} 
+    else if (numero % 2 != 0){console.log(`Saída: ${(numero /2)} o número é ímpar`)}
+
+6) 
+    let numero = Number(prompt("Digite um número"))
+    console.log(`Entrada: ${numero}`)
+    if(numero > 20 && numero < 90){console.log("O número está na faixa entre 20 e 90")} 
+    else {console.log("O número está fora da faixa")}
+
+7) 
+    let A = 10
+    let B = 20
+    console.log(Boolean(A > 10 && B <= 20)) // false
+    console.log(Boolean(A > 10 || B <= 20)) // true
+    console.log(Boolean((A === 10 || B > 20) && B === 20)) // true
+    console.log(null || 2 || undefined) // 2
+    console.log(Boolean(0 && 1)) // false
+
+8)
+    let A = Number(prompt("Digite um valor A"))
+    let B = Number(prompt("Digite um valor B"))
+    let C = Number(prompt("Digite um valor C"))
+    console.log(`Entrada:\n${A}, ${B}, ${C}`)
+    if(A > B && A > C){console.log(`Saída:\nO maior número é ${A}`)}
+    if(B > A && B > C){console.log(`Saída:\nO maior número é ${B}`)}
+    if(C > A && C > B){console.log(`Saída\nO maior número é ${C}`)}
+
+9)
+    
