@@ -61,4 +61,130 @@
     if(C > A && C > B){console.log(`Saída\nO maior número é ${C}`)}
 
 9)
+    a + b < 4 ? console.log(resultado = "Abaixo") : console.log(resultado = "Acima")
+
+10) 
+    let lado1 = Number(prompt("Digite a medida de um lado de um triângulo"))
+    let lado2 = Number(prompt("Digite a medida do outro lado"))
+    let lado3 = Number(prompt("Digite a medida do outro lado"))
+    console.log(`Medida dos lados: ${lado1}, ${lado2}, ${lado3}`)
+    if(lado1 == lado2 && lado1 == lado3){console.log("Triângulo Equilátero: 3 lados iguais")} 
+    else if (lado1 == lado2 && lado1 != lado3){console.log("Triângulo Isóceles: 2 lados iguais")}
+    else if (lado2 == lado3 && lado2 != lado1){console.log("Triângulo Isóceles: 2 lados iguais")}
+    else if (lado3 == lado1 && lado3 != lado2){console.log("Triângulo Isóceles: 2 lados iguais")}
+    else (console.log("Triângulo Escaleno: 3 lados diferentes"))
+
+11)
+    let numero = Number(prompt("Digite um número"))
+    let raizQuadrada = Math.sqrt(numero) 
+    if(numero >= 0){console.log(`A raiz quadrada de ${numero} é: ${raizQuadrada.toFixed(2)}`)} 
+    else {console.log("O número é inválido")}
+
+12)
+    let numero = Number(prompt("Digite um número"))
+    if(numero % 5 == 0){console.log("O número é divisível por 5")}
+    else (console.log("O número NÃO é divisível por 5"))
+
+13)
+    let numero = Number(prompt("Digite um número"))
+    let raizQuadrada = Math.sqrt(numero) 
+    let quadrado = numero ** 2 
+    if(numero >= 0){console.log(`A raiz quadrada de ${numero} é: ${raizQuadrada.toFixed(2)}`)} 
+    else {console.log(`O número ${numero} ao quadrado é: ${quadrado}`)}
+
+14)
+    let salario = Number(prompt("Digite o salário de um trabalhador"))
+    let prestacaoEmprestimo = Number(prompt("Digite o valor da prestação de um empréstimo"))
+    let prestacao = (salario * 20) / 100
+    if(prestacaoEmprestimo > prestacao){console.log("Empréstimo não concedido")} 
+    else {console.log("Empréstimo concedido")}
+
+15) 
+    let placarTime1 = Number(prompt("Digite o placar do time 1"))
+    let placarTime2 = Number(prompt("Digite o placar do time 2"))
+    if(placarTime1 == placarTime2){console.log("Empate")}
+    else if (placarTime1 > placarTime2){console.log("Vitória do time 1")}
+    else (console.log("Vitória do time 2"))
+      
+16)
+    let idade = Number(prompt("Digite sua idade"))
+    if(idade >= 16 && idade < 18){console.log("Voto opcional")}
+    else if (idade >= 18) {console.log("Voto obrigatório")}
+    else {console.log("Não precisa votar")}
+
+17)
+    let numero1 = Number(prompt("Digite o número 1"))
+    let numero2 = Number(prompt("Digite o número 2"))
+    let numero3 = Number(prompt("Digite o número 3"))
+    let aux = numero1
+    if(numero2 >= numero1){
+        aux = numero2
+        numero2 = numero1
+        numero1 = aux
+    }
+    if(numero3 >= numero1){
+        aux = numero3
+        numero3 = numero1
+        numero1 = aux
+    }
+    if(numero3 >= numero2){
+        aux = numero3
+        numero3 = numero2
+        numero2 = aux
+    }(console.log(`${numero1}, ${numero2}, ${numero3}`))
+    
+
+18)CORRIGIR
+
+    let idade = Number(prompt("Digite sua idade"))
+    if(idade >= 18 && idade <= 67){console.log("Pode doar sangue")} 
+    else (console.log("Não pode doar sangue"))
+   
+
+19)   
+    let dia = Number(prompt("Digite um número"))
+    switch (dia){
+        case 1 : (console.log("Domingo"))
+        break
+        case 2 : (console.log("Segunda-Feira"))
+        break
+        case 3 : (console.log("Terça-Feira"))
+        break
+        case 4 : (console.log("Quarta-Feira"))
+        break
+        case 5 : (console.log("Quinta-Feira"))
+        break
+        case 6 : (console.log("Sexta-Feira"))
+        break
+        case 7 : (console.log("Sábado"))
+        }
+
+20)
+    let mes = Number(prompt("Digite um número"))
+        switch (mes){
+        case 1 : (console.log("Janeiro"))
+        break
+        case 2 : (console.log("Fevereiro"))
+        break
+        case 3 : (console.log("Março"))
+        break
+        case 4 : (console.log("Abril"))
+        break
+        case 5 : (console.log("Maio"))
+        break
+        case 6 : (console.log("Junho"))
+        break
+        case 7 : (console.log("Julho"))
+        break
+        case 8 : (console.log("Agosto"))
+        break
+        case 9 : (console.log("Setembro"))
+        break
+        case 10 : (console.log("Outubro"))
+        break
+        case 11 : (console.log("Novembro"))
+        break
+        case 12 : (console.log("Dezembro"))
+
+21)
     
