@@ -9,12 +9,13 @@
     <script>
         let turno = String(prompt("Em qual turno você estuda? (digite `M` para matutino, `V` para vespertino, e `N` para noturno)"))
         switch (turno){
-            case M : (console.log("Matutino"))
+            case "M" : (console.log("Matutino\nBom dia!"))
             break
-            case V : (console.log("Vespertino"))
+            case "V" : (console.log("Vespertino\nBoa tarde!"))
             break
-            case N : (console.log("Noturno"))
+            case "N" : (console.log("Noturno\nBoa noite!"))
         }
+        if (turno != "M" && turno != "V" && turno != "N"){console.log("Valor inválido!")}
         
 
     </script>

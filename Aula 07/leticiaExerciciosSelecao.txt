@@ -134,10 +134,9 @@
     }(console.log(`${numero1}, ${numero2}, ${numero3}`))
     
 
-18)CORRIGIR
-
+18)
     let idade = Number(prompt("Digite sua idade"))
-    if(idade >= 18 && idade <= 67){console.log("Pode doar sangue")} 
+    if((idade > 18 || idade === 18) && (idade < 67 || idade === 67)){console.log("Pode doar sangue")} 
     else (console.log("Não pode doar sangue"))
    
 
@@ -187,4 +186,13 @@
         case 12 : (console.log("Dezembro"))
 
 21)
+    let turno = String(prompt("Em qual turno você estuda? (digite `M` para matutino, `V` para vespertino, e `N` para noturno)"))
+        switch (turno){
+            case "M" : (console.log("Matutino\nBom dia!"))
+            break
+            case "V" : (console.log("Vespertino\nBoa tarde!"))
+            break
+            case "N" : (console.log("Noturno\nBoa noite!"))
+        }
+    if (turno != "M" && turno != "V" && turno != "N"){console.log("Valor inválido!")}
     
