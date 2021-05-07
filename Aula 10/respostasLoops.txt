@@ -1,0 +1,79 @@
+RESPOSTAS EXERCÍCIOS LOOPS
+
+1)   
+let i = 0
+while (i < 10) {
+    console.log("Olá Mundo!")
+    i++
+}
+
+
+let j = 0
+do {
+    console.log("Olá Mundo!")
+    j++
+} while (j < 10)
+
+
+for (let x = 0; x < 10; x++) {
+    console.log("Olá Mundo!")
+}
+
+
+2) 
+let i = 0
+    while (i < 10) {
+        console.log(`Estou aparecendo pela ${i} na tela!`)
+        i++
+    }
+
+
+let j = 0
+    do {
+        console.log(`Estou aparecendo pela ${j} na tela!`)
+        j++
+    } while (j < 10)
+
+
+for (let x = 0; x < 10; x++) {
+    console.log(`Estou aparecendo pela ${x} na tela!`)
+}
+
+
+3) ERRADO??????
+
+for (let i = 0; i < 11; i++) {
+    console.log(i)
+}
+console.log("FIM")
+
+4) 
+for (let i = 0; i < 3; i++) {
+let numero1 = +prompt("Digite o primeiro número")
+let numero2 = +prompt("Digite o segundo número")
+
+let subtração = numero1 - numero2
+
+console.log(`${numero1} - ${numero2} = ${subtração}`)
+}
+
+
+5)
+???????????????????
+
+6) 
+let soma = 0 
+    while (true) {
+        let valor = +prompt("Digite 5 valores")
+
+        if (!valor) {
+                break
+    }
+        soma += valor 
+    }
+console.log(`Soma: ${soma}`)
+let media = soma / 5
+console.log(`Média: ${media}`)
+
+
+7)
