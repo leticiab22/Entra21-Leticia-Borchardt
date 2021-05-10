@@ -40,7 +40,7 @@ for (let x = 0; x < 10; x++) {
 }
 
 
-3) ERRADO??????
+3) ??????
 
 for (let i = 0; i < 11; i++) {
     console.log(i)
