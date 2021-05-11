@@ -1,5 +1,7 @@
 1) Leia um vetor de 10 posicões. Calcule e escreva quantos valores pares ele possui.
 
+
+
 2) Escreva um programa que leia 5 numeros e os armazene em um vetor. Mostre o vetor, o 
 maior elemento e a posição que ele se encontra.
 

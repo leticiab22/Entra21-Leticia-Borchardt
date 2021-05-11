@@ -76,10 +76,10 @@ let contador = 0
     let lista = ""
     let resultado = 0
     let numeroN = Number(prompt("Digite um número"))
-        for (let i = 0; i<=numeroN;i++) {
-            if (i%2!=0) {
+        for (let i = 0; i <= numeroN; i++) {
+            if (i % 2 != 0) {
             resultado = i
-            if (i == numeroN){
+            if (i == numeroN || i == nuemeroN - 1){
                 lista+=resultado
             }
         else{
@@ -93,7 +93,7 @@ let contador = 0
 
 8 - let numeroN = Number(prompt("Digite um número"))
         for (let i = 1; i<=10;i++) {
-            console.log(`${numeroN} * ${i} = ${numeroN*i}`)
+            console.log(`${numeroN} x ${i} = ${numeroN*i}`)
         }
 
 
@@ -135,7 +135,7 @@ let contador = 0
         if (numero < 0){
             break
         }
-        if (numero>10 && numero<20){
+        if (numero >= 10 && numero <= 20){
             totalIntervalo++
         }
         else{
@@ -238,7 +238,7 @@ let contador = 0
         break
     }
     }
-    console.log(`Total de Votos\nJosé Bolinha: ${totalVotosJoao} voto(s)\nMaria Nascimento: ${totalVotosMaria} voto(s)\nJoão da Silva: ${totalVotosJoao} voto(s)\nVotos Nulos: ${totalNulos} voto(s)\nVotos em Branco: ${totalBranco} voto(s)`)
+    console.log(`Total de Votos\nJosé Bolinha: ${totalVotosJose} voto(s)\nMaria Nascimento: ${totalVotosMaria} voto(s)\nJoão da Silva: ${totalVotosJoao} voto(s)\nVotos Nulos: ${totalNulos} voto(s)\nVotos em Branco: ${totalBranco} voto(s)`)
 
 
 
