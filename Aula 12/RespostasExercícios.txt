@@ -1,0 +1,136 @@
+1)
+
+let vetor = [],
+    pares = 0
+
+for (let i = 0; i < 10; i++) {
+    vetor[i] = +prompt(`Digite o ${i + 1}º valor`)
+    if (vetor[i] % 2 === 0) pares++
+}
+
+console.log(`A quantidade de números pares é ${pares}`)
+
+
+2)
+
+let vetor = []
+for (let i = 0; i < 5; i++) {
+    vetor[i] = +prompt(`Digite o ${i + 1}º valor`)
+    console.log(vetor[i])
+}
+
+let maior = vetor[0]
+let posicao = 0
+for (i = 1; i < 5; i++) {
+    if (vetor[i] > maior){
+    maior = vetor[i] 
+    posicao = i
+}}
+console.log(`O maior elemento é ${maior}, localizado na posição ${posicao}`)
+
+
+3)
+
+let vetor = []
+    for (let i = 0; i < 5; i++) {
+        vetor[i] = +prompt(`Digite o ${i + 1}º valor`)
+        console.log(vetor[i])
+}
+
+let maior = vetor[0]
+let menor = vetor[0]
+for (i = 1; i < 5; i++) {
+    if (vetor[i] > maior){
+    maior = vetor[i]
+}
+    if (vetor[i] < menor){
+    menor = vetor[i]
+}}
+console.log(`O maior elemento é ${maior}, e o menor é ${menor}`)
+
+
+4)
+
+let vetor = []
+    for (let i = 0; i < 5; i++) {
+    vetor[i] = +prompt(`Digite o ${i + 1}º valor`)
+    console.log(vetor[i])
+}
+
+let vetor2 = vetor
+for (let i = vetor2.length - 1; i >= 0; i--) {
+    console.log(vetor2[i])
+}
+
+
+5)
+
+let vetor = []
+for (let i = 0; i < 5; i++) {
+    vetor[i] = prompt(`Digite o ${i + 1}º nome`)        
+}
+
+let nome = prompt("Digite o nome que você quer encontrar")
+let achei
+
+for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor; i++) {
+    if (vetor[i] === nome) {
+    achei = true
+    break
+    }
+} 
+
+achei ? console.log("ACHEI") : console.log("NÃO ACHEI")
+
+
+6)
+
+let A = [1, 0, 5, -2, -5, 7]
+console.log(A)
+
+let soma = A[0] + A[1] + A[5]
+console.log(`A soma das posições 0, 1 e 5 é: ${soma}`)
+
+A[4] = 100
+console.log(A)
+        
+for (let i = 0, tamanhoVetor = A.length; i < tamanhoVetor; i++) {
+    console.log(A[i])
+}
+
+
+7)
+
+let vetor = []
+    for (let i = 0; i < 5; i++) {
+    let numero = +prompt(`Digite o ${i + 1}º número`)
+    vetor[i] = numero
+}
+let vetorResultado = []
+    for (let i = 0; i < 5; i++) {
+    let numeroQuadrado = (vetor[i]) ** 2
+    vetorResultado[i] = numeroQuadrado
+}
+
+console.log(`Primeiro conjunto: ${vetor}\nSegundo conjunto: ${vetorResultado}`)
+
+
+8)
+
+let vetor = []
+contadorPares = 0
+    while (contadorPares <= 5){
+    let numero = +prompt("Digite um número")
+    if (numero % 2 != 0){
+        alert("Número inválido")
+        continue
+    }
+vetor[contadorPares] = numero
+contadorPares++
+}
+for (let i = vetor.length - 1; i >= 0; i--){
+console.log(vetor[i])
+}
+
+
+9)

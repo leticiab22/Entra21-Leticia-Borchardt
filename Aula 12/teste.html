@@ -8,12 +8,31 @@
 <body>
     <script>
         let vetor = []
-        for (let i = 0; i < 10; i++) {
-            vetor[i] = +prompt("Digite um número")
+        for (let i = 0; i < 8; i++) {
+            vetor[i] = prompt(`Digite o ${i + 1}º número`)        
         }
+
+        let X = prompt("Digite uma posição de 0 a 7")
+        let Y = prompt("Digite outra posição de 0 a 7")
+        let encontrado
+
         for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor; i++) {
-            console.log(vetor[i])
-        }
+            if (vetor[i] === X && vetor[i] === Y) {
+            encontrado = true
+            break
+            }
+
+        if (encontrado){
+            let soma = X + Y
+            console.log(soma)
+        }}
     </script>
 </body>
 </html>
+
+/*9) Faça um programa que leia um vetor de 8 posições e, em seguida, leia também dois
+valores X e Y quaisquer correspondentes a duas posições no vetor. Ao final seu programa
+deverá escrever a soma dos valores encontrados nas respectivas posições X e Y. Se o usuário
+digitar valores inválidas para X ou Y mostre uma mensagem de erro e peça novos valores até 
+que ambos os valores sejam válidos.
+*/
