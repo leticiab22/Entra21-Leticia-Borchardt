@@ -7,32 +7,36 @@
 </head>
 <body>
     <script>
-        let vetor = []
-        for (let i = 0; i < 8; i++) {
-            vetor[i] = prompt(`Digite o ${i + 1}º número`)        
-        }
-
-        let X = prompt("Digite uma posição de 0 a 7")
-        let Y = prompt("Digite outra posição de 0 a 7")
-        let encontrado
-
-        for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor; i++) {
-            if (vetor[i] === X && vetor[i] === Y) {
-            encontrado = true
-            break
+        let vetor1 = []
+            for (let i = 0; i < 5; i++) {
+            vetor1[i] = +prompt(`Digite o ${i + 1}º valor do vetor 1`)
+            console.log(vetor1[i])
             }
-
-        if (encontrado){
-            let soma = X + Y
-            console.log(soma)
-        }}
+        let vetor2 = []
+            for (let x = 0; x < 5; x++) {
+            vetor2[x] = +prompt(`Digite o ${x + 1}º valor do vetor 2`)
+            console.log(vetor2[x])
+            }
+        if (vetor1[i] === vetor2[x]){
+            console.log("Os vetores são iguais")
+        } else {
+            console.log("Os vetores são diferentes")
+        }
+        
     </script>
 </body>
 </html>
 
-/*9) Faça um programa que leia um vetor de 8 posições e, em seguida, leia também dois
-valores X e Y quaisquer correspondentes a duas posições no vetor. Ao final seu programa
-deverá escrever a soma dos valores encontrados nas respectivas posições X e Y. Se o usuário
-digitar valores inválidas para X ou Y mostre uma mensagem de erro e peça novos valores até 
-que ambos os valores sejam válidos.
+/*Escreva um programa que leia dois vetores com 5 posições e mostre se eles são iguais ou diferentes
+Entrada:             Saída:
+1                    Os vetores são iguais
+2
+3
+4
+5
+1
+2
+3
+4
+5
 */
