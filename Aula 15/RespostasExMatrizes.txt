@@ -1,0 +1,103 @@
+RESPOSTAS DOS EXERCÍCIOS DE MATRIZES
+
+QUESTÃO 1)
+
+let matriz = []
+let quantidadeMaior10 = 0
+    for (let i = 0; i < 3; i++) {
+    matriz[i] = []
+        for (let j = 0; j < 3; j++) {
+        matriz[i][j] = +prompt("Digite um número")
+
+        if (matriz[i][j] > 10) {
+        quantidadeMaior10++
+        }
+    }
+}
+console.log(`A quantidade de elementos digitados que são maiores que 10 é: ${quantidadeMaior10}`)
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+QUESTÃO 2)
+
+let matriz = []
+    for (let i = 0; i < 5; i++) {
+    matriz[i] = []
+        for (let j = 0; j < 5; j++) {
+        matriz[i][j] = []    
+            
+if (i == j) {
+    matriz[i][j] = 1
+}
+    else {matriz[i][j] = 0}
+}
+}
+console.log(matriz)
+        
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+QUESTÃO 3)
+
+let matriz = []
+    for (let i = 0; i < 3; i++) {
+    matriz[i] = []
+        for (let j = 0; j < 3; j++) {
+            matriz[i][j] = +prompt("Digite um número")
+        }
+    }
+        
+let valorX = +prompt("Digite um número para encontrar na matriz")
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 3; j++){
+
+    if(matriz[i][j] === valorX){ 
+        console.log(`Número encontrado na linha ${i}, coluna ${j}`)}
+    else {
+        console.log("Não encontrado")
+    }
+}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+QUESTÃO 4)
+let matriz = []
+    for (let i = 0; i < 3; i++) {
+        matriz[i] = []
+        for (let j = 0; j < 3; j++) {
+            matriz[i][j] = +prompt("Digite um número para a matriz 1")
+        }
+    }
+let matriz2 = []
+    for (let i = 0; i < 3; i++) {
+        matriz2[i] = []
+        for (let j = 0; j < 3; j++) {
+            matriz2[i][j] = +prompt("Digite um número para a matriz 2")
+        }
+    }
+let matriz3 = []
+    for(let i = 0; i < 3; i++) {
+        matriz3[i] = []
+        for(let j = 0; j < 3; j++) {
+            matriz3[i][j]
+
+        if(matriz[i][j] >= matriz2[i][j]) {
+            matriz3[i][j] = matriz[i][j];
+        } else {
+            matriz3[i][j] = matriz2[i][j];
+        }
+    }
+}
+
+for(let i = 0; i < 3; i++) {
+    for(let j = 0; j < 3; j++) {
+        console.log(matriz3[i][j])
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+QUESTÃO 5)
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vetor = []
+        for ( let i = 0; i < 100; i++) {
+            vetor[i] = Math.floor(Math.random() * (7 - 1) + 1)
+        }
+        let contadores = [0,0,0,0,0,0]
+        for(let i = 0; i < 100; i ++){
+            switch (vetor[i]) {
+                case 1 : contadores[0]++
+                break
+                case 2 : contadores[1]++
+                break
+                case 3 : contadores[2]++
+                break
+                case 4 : contadores[3]++
+                break
+                case 5 : contadores[4]++
+                break
+                case 6 : contadores[5]++
+                break
+            }
+        }
+        for(let i =0; i <6; i++) {
+            console.log(`O número ${i +1} aparece ${contadores} vezes`)
+        }
+        
+    </script>
+</body>
+</html>
+
+/*Escreva um script que leia 2 números e crie um vetor que armazene os valores presentes 
+no intervalo entre os 2 números com o passo 2. Após isso, mostre na tela o vetor.
+Entrada:              Saída:
+1                     1
+10                    3
+                      5
+                      7
+                      9
+-----------------------------
+2                     2
+10                    4
+                      6
+                      8
+                      10

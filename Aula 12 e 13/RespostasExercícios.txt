@@ -212,11 +212,75 @@ console.log(`A posição do maior número é: ${posicaoMaior}\nA posição do me
 
 12)
 
+let vetor = []
+    for ( let i = 0; i < 100; i++) {
+        vetor[i] = Math.floor(Math.random() * (7 - 1) + 1)
+    }
+let contadores = [0,0,0,0,0,0]
+    for(let i = 0; i < 100; i ++){
+        switch (vetor[i]) {
+            case 1 : contadores[0]++
+                break
+            case 2 : contadores[1]++
+                break
+            case 3 : contadores[2]++
+                break
+            case 4 : contadores[3]++
+                break
+            case 5 : contadores[4]++
+                break
+            case 6 : contadores[5]++
+                break
+            }
+        }
+
+    for(let i =0; i <6; i++) {
+        console.log(`O número ${i +1} aparece ${contadores} vezes`)
+        
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 13)
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-14)
+14) ******************INCOMPLETO****************
+
+let vetor1 = []
+    for (let i = 0; i < 5; i++) {
+    vetor1[i] = +prompt(`Digite o ${i + 1}º valor do vetor 1`)
+    console.log(vetor1[i])
+    }
+let vetor2 = []
+    for (let i = 0; i < 5; i++) {
+    vetor2[i] = +prompt(`Digite o ${i + 1}º valor do vetor 2`)
+    console.log(vetor2[i])
+    }
+
+if (vetor1[i] === vetor2[i]){
+    console.log("Os vetores são iguais")}
+else {
+    console.log("Os vetores são diferentes
+}
+    
+------------------------------------------------------------------------------------------------------------------------------------------
+
+15) ***************INCOMPLETO***************
+
+let vetor1 = []
+for (let i = 0; i < 5; i++) {
+vetor1[i] = +prompt(`Digite o ${i + 1}º valor do vetor 1`)
+    }
+let vetor2 = []
+    for (let i = 0; i < 5; i++) {
+    vetor2[i] = +prompt(`Digite o ${i + 1}º valor do vetor 2`)
+    for (let i = 0, tamanhoVetor = vetor2.length; i < tamanhoVetor; i++) {
+    if (vetor1[i] === vetor2[i]) {
+    let vetorInterseccao = i
+            }
+        } 
+            }
+
+console.log(`Vetor 1: ${vetor1}\nVetor 2: ${vetor2}\nIntersecção:${vetorInterseccao}`)
+
+------------------------------------------------------------------------------------------------------------------------------------------
 
