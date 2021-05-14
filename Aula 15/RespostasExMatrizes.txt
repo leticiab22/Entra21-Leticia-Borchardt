@@ -99,5 +99,5 @@ for(let i = 0; i < 3; i++) {
 
 QUESTÃO 5)
 
-
+lk
 
