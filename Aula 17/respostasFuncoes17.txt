@@ -1,0 +1,156 @@
+RESPOSTAS EXERCÍCIOS DE FUNÇÕES - AULA 17
+
+1)
+ function ehPostivo(numero) {
+    return numero > 0
+}
+
+let numero = +prompt("Digite um número")
+
+console.log(ehPostivo(numero))
+
+-----------------------------------------------------------------------------------------------
+
+2)
+function minimo(a, b) {
+    if (a < b) {
+        return a
+    } 
+    return b
+    // return a < b ? a : b
+}
+
+let a = +prompt("Digite o valor de a"),
+    b = +prompt("Digite o valor de b")
+
+console.log(minimo(a, b))
+
+-----------------------------------------------------------------------------------------------
+
+3)
+function potencia(a,b){
+    return a ** b 
+}
+
+let a = +prompt("Digite o valor de a")
+let b = +prompt("Digite o valor de b")
+console.log(potencia(a,b))
+
+-----------------------------------------------------------------------------------------------
+
+4)
+function media(nota1, nota2, nota3){
+    return (nota1 + nota2 + nota3) / 3
+}
+
+let nota1 = +prompt("Digite a nota 1"),
+    nota2 = +prompt("Digite a nota 2"),
+    nota3 = +prompt("Digite a nota 3")
+
+console.log(media(nota1, nota2, nota3).toFixed(2))
+
+-----------------------------------------------------------------------------------------------
+
+5)
+function valorMedia(media){
+    if (media < 0 || media>10){
+    return"Valor inválido"
+} else if (media <5 && media>=0){
+    return "Conceito D"
+} else if (media <7){
+    return "Conceito C"
+} else if (media <9){
+    return "Conceito B"
+} else{
+    return "Conceito A"
+    }
+}
+
+let media = +prompt("Digite a média do aluno")
+console.log(valorMedia(media))
+
+-----------------------------------------------------------------------------------------------
+
+6)
+function calculaPesoIdeal(altura, sexo) {
+    switch (sexo) {
+    case "M" : 
+    pesoIdeal = 62.1 * altura - 44.7
+    console.log(pesoIdeal.toFixed(2))
+    break
+            
+    case "H" : 
+    pesoIdeal = 72.7 * altura - 58
+    console.log(pesoIdeal.toFixed(2))
+    break
+    default : console.log("Opção Inválida")
+    } 
+}
+
+
+let altura = +prompt("Digite sua altura")
+let sexo = prompt("Digite seu sexo (digite M para mulher, H para homem")
+calculaPesoIdeal(altura, sexo)
+
+-----------------------------------------------------------------------------------------------
+
+7)
+let vetor = []
+    function lerNumeros () {
+        for (let x = 0; x < 50; x++) {
+            let numero = Math.round((Math.random(1, 50)*(50-1))+1)
+            vetor[x] = numero
+            console.log(vetor[x])
+        }
+    }
+    function lerMaiorMenor(numero) {
+        let maior = Math.max.apply(null, vetor)
+            console.log(`maior: ${maior}`)
+        let menor = Math.min.apply(null, vetor)
+            console.log(`menor: ${menor}`)
+    }
+
+lerNumeros()
+lerMaiorMenor()
+
+-----------------------------------------------------------------------------------------------
+
+8)
+function recebeIdade(anos, meses, dias) {
+    return (anos * 365) + (meses * 30) + dias
+}
+    let anos = +prompt("Informe sua idade (anos, meses e dias)\nDigite a quantidade de anos:"),
+    meses = +prompt("Digite a quantidade de meses"),
+    dias = +prompt("Digite a quantidade de dias")
+
+alert(`Você tem ${recebeIdade(anos,meses,dias)} dias de idade!`)
+
+-----------------------------------------------------------------------------------------------
+
+9) ****************Refazer
+function recebeValor(valor) {
+    let divisores = 0
+    for (let i = 0; i = valor; i++)
+        if (valor % 2 === 0) {
+        return divisores++
+    }
+}
+let valor = +prompt("Digite um valor inteiro e positivo")
+console.log(recebeValor(valor))
+
+-----------------------------------------------------------------------------------------------
+
+10)******************Refazer
+function recebeValor(valor, fatoracao) {
+    if (valor > 0){
+        for (let i = valor - 1; i > 0; i--) {
+        fatoracao *= i
+        }
+    } else {alert("Digite um valor válido")}
+}
+let valor = +prompt("Digite um valor inteiro e positivo")
+console.log(recebeValor(valor, fatoracao))
+
+-----------------------------------------------------------------------------------------------
+
+11)
