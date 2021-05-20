@@ -127,30 +127,84 @@ alert(`Você tem ${recebeIdade(anos,meses,dias)} dias de idade!`)
 
 -----------------------------------------------------------------------------------------------
 
-9) ****************Refazer
-function recebeValor(valor) {
-    let divisores = 0
-    for (let i = 0; i = valor; i++)
-        if (valor % 2 === 0) {
-        return divisores++
-    }
-}
-let valor = +prompt("Digite um valor inteiro e positivo")
-console.log(recebeValor(valor))
+9) 
+
+
 
 -----------------------------------------------------------------------------------------------
 
-10)******************Refazer
-function recebeValor(valor, fatoracao) {
-    if (valor > 0){
-        for (let i = valor - 1; i > 0; i--) {
-        fatoracao *= i
-        }
-    } else {alert("Digite um valor válido")}
+10)
+function calcularFatorial1 (n) {
+    if (n === 1) {
+    return 1;
+    }
+    return n * calcularFatorial1 (n - 1);
 }
-let valor = +prompt("Digite um valor inteiro e positivo")
-console.log(recebeValor(valor, fatoracao))
+            
+function calcularFatorial (fatorial) {
+    if (isNaN(fatorial)) {
+    return 'Não existe fatorial de um texto';
+}
+                
+if (!Number.isInteger(fatorial) || fatorial < 0) {
+    return 'Não existe fatorial de um número não natural';
+}
+                
+if (fatorial === 0 || fatorial === 1) {
+    return 1;
+}
+                
+return calcularFatorial1(fatorial);
+}
+let numero = +prompt("Digite um número para fatorar")
+console.log(calcularFatorial(numero));
 
 -----------------------------------------------------------------------------------------------
 
 11)
+let soma = 0
+function perfeito(numero){
+    for(let i = 2; i < numero ; i++)
+        if (numero % i == 0)
+        soma += i
+        soma++
+
+if(soma == numero)
+console.log("perfeito")
+    else
+console.log("não é perfeito")
+}
+
+let numero = +prompt("Digite um número")  
+perfeito(numero
+
+-----------------------------------------------------------------------------------------------
+
+12)
+let vetor = []
+    function armazenarValores () {
+        for (let x = 0; x < 50; x++) {
+let numero = Math.round((Math.random(1, 50)*(50-1))+1)
+    vetor[x] = numero
+        
+    }
+}
+armazenarValores()
+    function ordenarValores(lista){
+let guardar = 0
+    for (let i = 1; i < lista.length; i++){
+        for (let j = 0; j < i; j++){
+            if(lista[i]>lista[j]){
+                guardar = lista[i]
+                lista[i] = lista[j]
+                lista[j] = guardar
+            }
+        }
+    }
+return(lista)
+}
+console.log(ordenarValores(vetor))
+
+-----------------------------------------------------------------------------------------------
+
+13)
