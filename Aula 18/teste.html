@@ -7,25 +7,21 @@
 </head>
 <body>
     <script>
-        
-        let vetor = []
-        for (let i = 0; i < 5; i++) {
-            vetor[i] = prompt(`Digite o ${i + 1}º numero`)        
+        function mostraSimbolo(n) {
+            return n * "#"
         }
-
-        let ultimo = vetor.pop()
-        let primeiro = vetor.shift()
-        let novoVetor = [primeiro, ultimo]
-
         
+        let n = +prompt("Digite um número")
+        console.log(mostraSimbolo(n))
+
+                
 
 
     </script>
 </body>
 </html>
 
-1) Crie uma função que receba uma array e retorne o primeiro e o último elemento desse array como um novo.
-O array pode ter qualquer tamanho.
-
-vetor.pop()
-vetor.shift()
+2) Crie uma função que recebe um número como parâmetro e retorne uma string com o símbolo "#" na quantidade
+especificada no parâmetro.
+Exemplo:
+mostraSimbolo(10) // ##########

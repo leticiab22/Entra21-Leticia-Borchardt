@@ -9,10 +9,14 @@
     <script>
         function recebeValores(a, b, c) {
             return delta = (b**2) - 4 * a * c
-            return - b + (Math.sqrt(delta)) / 2 * a
-            
-
+            return resultado1 = - b + (Math.sqrt(delta)) / (2 * a)
+            return resultado2 = - b - (Math.sqrt(delta)) / (2 * a)
         }
+        let a = +prompt("Digite o valor a"),
+            b = +prompt("Digite o valor b"),
+            c = +prompt("Digite o valor c")
+
+        console.log(recebeValores(a, b, c))
 
     </script>
 </body>

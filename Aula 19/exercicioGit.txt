@@ -14,3 +14,4 @@ Para isso, o script deve implementar as seguintes funções:
 Ao final, faça o merge das três branches.
 
 2) Crie um segundo repositório "treinando-git2" e faça a mesma coisa que o exercício anterior utilizando o fork.
+

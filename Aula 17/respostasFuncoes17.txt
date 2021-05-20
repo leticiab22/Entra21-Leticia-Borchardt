@@ -176,7 +176,7 @@ console.log("não é perfeito")
 }
 
 let numero = +prompt("Digite um número")  
-perfeito(numero
+perfeito(numero)
 
 -----------------------------------------------------------------------------------------------
 
