@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let string = prompt("Digite algo")
+        function capitalize(string){
+            string.split("  ")
+            
+            string = string[0].toUpperCase() + string.slice(1)
+        }
+        console.log(capitalize(string))
+        
+    </script>
+</body>
+</html>
+
+1) Escreva uma função capitalize(string) que retorna uma string com o primeiro caractere de 
+           cada palavra em maiúsculo.
+
+           
+
+3) Escreva uma função truncar(string, tamanhoMaximo) que checa o tamanho de um string e se ela
+excede o tamanhoMaximo substitui o final da string com "..."
+Exemplo:
+truncar("teste teste teste teste", 10) -> "teste test..."
+
+let string = prompt("Digite algo")
+        let tamanhoMaximo = +prompt("Digite o tamanho máximo")
+        function truncar(string, tamanhoMaximo){
+            if (string > tamanhoMaximo) {
+                console.log(string.endsWith("..."))
+            }
+        }
