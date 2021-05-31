@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1)
+    {    
+        function estaVazio(objeto) {
+        return !Object.keys(objeto).length
+        } 
+        let objeto = {}
+        console.log(estaVazio(objeto))
+    }
+
+        // 2) errado
+    {
+        let objeto = {
+            p1: 20,
+            p2: 50,
+            p3: 85,
+            p4: "Olá",
+            p5: "Teste",
+            p6: "string",
+            p7: 10 
+        }
+        function somaPropriedades(objeto) {
+            for (let chave in objeto)
+            if (typeof objeto[chave] === "number") {
+                soma += objeto
+            }
+        }
+        console.log(soma)
+    }
+
+        // 1) 
+    {
+        let objetoContador = {
+            atual: 0,
+            incrementa() {
+                this.atual++
+            },
+            decrementa() {
+                this.atual--
+            },
+            incrementaEm(quantidade) {
+                this.atual += quantidade
+            },
+            decrementaEm(quantidade) {
+                this.atual -= quantidade
+            },
+            mostraContador() {},
+        }
+        
+    }
+
+        // 2
+
+    {
+
+    }
+    </script>
+</body>
+</html>

@@ -100,22 +100,27 @@
         Exemplo:
         truncar("teste teste teste teste", 10) -> "teste test..."
         */
- {
-     // 2)
-        let palavras = prompt("digite")
-        function checaSpam(palavras){
-            if (palavras.includes("jequiti")) {
-                return console.log(true)
-            }
-            else if (palavras.includes("day trading")){
-                return console.log(true)
-            }
-            else {
-                return console.log("as palavras nao aparecem")
-            }
+        function capitalize(string) {            
+            let palavras = string.split(" ")
+            for (let i = 0, tamanhoVetor = palavras.length; i < tamanhoVetor; i++) {
+                palavras[i] = palavras[i][0].toUpperCase() +  palavras[i].slice(1)
+            }            
+            return palavras.join(" ")
         }
- }
-        checaSpam(palavras)
+        
+        function checaSpam(string) {
+            let lowerCaseString = string.toLowerCase()
+
+            return lowerCaseString.includes("jequiti") || lowerCaseString.includes("day trading")
+        }
+
+        function truncar(string, tamanhoMaximo) {
+            return tamanhoMaximo < string.length ?
+                string.slice(0, tamanhoMaximo) + "..." 
+            : 
+                string        
+        }
+
     </script>
 </body>
 </html>
