@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(156, 155, 155);
+}
+hr {
+    border: 1px solid black;
+}
+.titulo{
+    color: blue;
+    text-align: center;
+    font-family: sans-serif;
+}
+.hr-branco{
+    border: 1px solid white;
+}
+.centro{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
