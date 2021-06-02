@@ -1,0 +1,19 @@
+table, td, td{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.produtos {
+    text-align: center;
+    color: white;
+    background-color: #098575;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.codigo-descricao {
+    background-color: #94c3bd;
+}
+.verdinho {
+    background-color: #c7ded9;
+    text-align: center;
+}
