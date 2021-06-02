@@ -1,0 +1,12 @@
+.titulo {
+    text-align: center;
+}
+
+.texto {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.links {
+    text-align: center;
+}

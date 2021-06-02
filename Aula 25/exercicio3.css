@@ -18,3 +18,7 @@ hr {
     margin-right: auto;
     width: auto;
 }
+.texto {
+    text-align: center;
+    font-family: sans-serif;
+}
