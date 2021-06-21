@@ -19,8 +19,15 @@ header h1 {
     font-family: "Lobster", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 5em;
     text-shadow: 6px 6px 7px rgb(247, 194, 194);
-    
 }
+
+header h1:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 
 nav{
     padding-top: 1em;
@@ -86,6 +93,14 @@ img {
     background-color: white;
 }
 
+.botao:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
 main{
     display: block;
     background-color: rgba(255, 255, 255, 0.323) ;
@@ -127,6 +142,7 @@ p{
     color: #151515;
     text-decoration: none;
     text-align: center;
+    display: block;
     
 }
 
@@ -141,4 +157,26 @@ section {
 hr {
    border: 1px solid rgba(0, 0, 0, 0.145);
 }
+
+
+
+footer{
+    padding-bottom: 1em;
+    background-color: white;
+    opacity: 0.7; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer .tituloFooter {
+    color: rgb(36, 36, 36);
+    font-family: "Lobster", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    text-shadow: 6px 6px 7px rgb(247, 194, 194);
+    padding-top: 25px;
+}
+
+footer p, .copy{
+    text-align: center;
+}
+
 

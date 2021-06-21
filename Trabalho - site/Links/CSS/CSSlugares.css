@@ -22,6 +22,15 @@ header h1 {
   
 }
 
+
+header h1:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 nav{
   padding-top: 1em;
   padding-bottom: 1em;
@@ -114,6 +123,13 @@ border: solid rgba(128, 128, 128, 0.289) 0.5px;
   overflow: hidden;
 }
 
+.botao:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
 .botao1 {
   font-size: 16px;
@@ -121,6 +137,7 @@ border: solid rgba(128, 128, 128, 0.289) 0.5px;
   color: #151515;
   text-decoration: none;
   text-align: center;
+  display: block;
   
 }
 
@@ -150,19 +167,19 @@ hr {
 
 
 
-
 div.gallery {
-  border: 1px solid #ccc;
-  background-color: white;
+  border: 1px solid rgba(204, 204, 204, 0.679);
+  background-color: rgba(255, 255, 255, 0.665);
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+div.gallery, div.gallery img:hover {
+  border: 1px solid rgba(119, 119, 119, 0.631);
+  opacity: 0.9;
 }
 
 div.gallery img {
   width: 100%;
-  height: auto;
+  height: 200px;
 }
 
 div.desc {
@@ -198,3 +215,27 @@ div.desc {
   display: table;
   clear: both;
 }
+
+
+footer{
+  padding-bottom: 1em;
+  background-color: white;
+  display: inline-block;
+  width: 100%;
+  opacity: 0.7; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer .tituloFooter {
+  color: rgb(36, 36, 36);
+  font-family: "Lobster", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2em;
+  text-shadow: 6px 6px 7px rgb(247, 194, 194);
+  padding: 0 ;
+}
+
+footer p, .copy{
+  text-align: center;
+}
+
+
