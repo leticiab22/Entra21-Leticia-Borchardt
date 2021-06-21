@@ -239,3 +239,38 @@ footer p, .copy{
 }
 
 
+@media screen and (max-width: 1000px){
+  body {
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: repeat;
+      font-size: 12px;
+      max-width: 100%;
+      text-align: center;
+  }
+  main {
+      max-width: 100%;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.74);
+      padding: 0;
+  }
+
+  p{
+      width: 100%;
+      padding: 15px;
+  }
+  img{
+      width: 300px;
+  }
+  nav i {
+      font-size: 20px;
+      padding: 0;
+  }
+}
+
+
+@media screen and (width: 360px){
+  p {
+      padding: 0;
+  }
+}
