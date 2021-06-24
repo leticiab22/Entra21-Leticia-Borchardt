@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Mouse</title>
+</head>
+<body>
+    <button>Alt+Shift+Ctrl+Click</button>
+
+    <div>Tente copiar esse texto :D</div>
+    <script>
+        /*
+        mousedown/mouseup -> Mouse clicado/liberto de um elemento.
+        mouseover/mouseout -> Mouse entrando/saindo do elemento.
+        mousemove -> Movimento do mouse sobre o elemento.
+        click -> Click no elemento.
+        dblclick -> Click duplo no elemento.
+        contextmenu -> Click com o botão direito.
+        */
+
+        /* 
+        Modificadores 
+            * Shift -> shiftKey
+            * Alt -> altKey
+            * Ctrl -> ctrlKey
+            * Cmd -> metaKey
+        */
+        let botao = document.querySelector("button")
+        botao.addEventListener("click", (event) => {
+            if (event.altKey && event.shiftKey && event.ctrlKey) {
+                alert("Deu certo!")
+            }
+        })
+
+        // Prevenir a cópia
+        let div = document.querySelector("div")
+        div.addEventListener("copy", (event) => {
+            event.clipboardData.setData("text/plain", "Não é possível copiar esse texto!")
+            event.preventDefault()
+        })        
+
+        /*
+        Exercícios
+
+        1)
+        <ul>
+            <li>Primeiro Item</li>
+            <li>Segundo Item</li>
+            <li>Terceiro Item</li>
+            <li>Quarto Item</li>
+            <li>Quinto Item</li>
+        </ul>
+
+        Crie uma lista selecionável (quando clicar em uma li a cor muda)
+        Se segurar a tecla Ctrl o elemento é selecionado em conjunto com os elementos já selecionados
+
+
+
+    
+
+        2) https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+
+                                    RESPOSTA
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        const list = document.querySelector("ul");
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+
+        button.onclick = function() {
+            let item = input.value;
+            input.value = '';
+        
+        const listItem = document.createElement("li");
+        const listText = document.createElement("span");
+        const listButton = document.createElement("button");
+
+        listItem.appendChild(listText);
+        listText.textContent = item;
+        listItem.appendChild(listButton);
+        listButton.textContent = "Delete";
+        list.appendChild(listItem);
+
+        listButton.onclick = function(e) {
+            list.removeChild(listItem)
+        }
+
+        input.focus()
+        }
+    */
+    </script>
+</body>
+</html>
