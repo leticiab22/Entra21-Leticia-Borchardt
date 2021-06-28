@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }        
+
+        pre {
+            display: inline-block;
+            position: fixed;            
+        }
+
+        pre:focus {
+            outline: 1px dotted pink;
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+         _   _
+        (q\_/p)
+         /. .\
+        =\_t_/=   __
+         /   \   (
+        ((   ))   )
+        /\) (/\  /
+        \  Y  /-'
+         nn^nn
+    </pre>
+    <script>
+        let rato = document.querySelector("pre")
+
+        rato.addEventListener("click", () => {
+            rato.tabIndex = 0
+            rato.focus()
+            
+            rato.style.left = rato.getBoundingClientRect().left
+            rato.style.top = rato.getBoundingClientRect().top
+        })
+
+        rato.addEventListener("keydown", (e) => {
+            console.log(e.key)
+            switch (e.key) {
+                case "ArrowRight":                    
+                    rato.style.left = parseInt(rato.style.left) + rato.clientWidth + "px"
+                    break
+                case "ArrowUp":
+                    rato.style.top = parseInt(rato.style.top) - rato.clientHeight + "px"
+                    break
+                case "ArrowLeft":
+                    rato.style.left = parseInt(rato.style.left) - rato.clientWidth + "px"
+                    break
+                case "ArrowDown":
+                    rato.style.top = parseInt(rato.style.top) + rato.clientHeight + "px"
+                    break
+            }
+        })
+
+    </script>
+</body>
+
+</html>
