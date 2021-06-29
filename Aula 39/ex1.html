@@ -6,12 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="muda">Clique em mim</div>
-    <textarea class="text"></textarea> 
+    <div id="mudar">Clique em mim</div>
+    <textarea id="texto"></textarea> 
     <script>
-        let div = document.querySelector(".muda")
-        let textarea = document.querySelector(".text")
-        let bd = document.querySelector("body")
+        let div = document.querySelector("div#mudar")
+        let textarea = document.querySelector("#texto")
+        let body = document.querySelector("body")
         textarea.hidden = true
         div.addEventListener("click", (event) => {
             textarea.hidden = false
