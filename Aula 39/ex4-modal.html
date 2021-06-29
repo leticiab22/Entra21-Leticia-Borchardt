@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .modal2{
+            top: 0px;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(194, 117, 75, 0.6);;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modalP{
+            background-color: teal;
+            width: 200px;
+            height: 200px;
+ 
+        }
+    </style>
+</head>
+<body OnLoad="document.esconder.modal2.modalP.texto2.focus();">
+ 
+ <center>   <button class="abrir">algo</button>
+    <div class="esconder">
+    <div class="modal2">
+<div class="modalP">
+<p class="texto"></p>
+<input type="text" class="texto2">
+<button class="ok">ok</button>
+<button class="cancelar">cancelar</button>
+</div>
+    </div>
+</div></center>
+ 
+<p class="callback"></p>
+ 
+    <script>
+ 
+let esconder = document.querySelector(".esconder")
+let callback = document.querySelector(".callback")
+let input = document.querySelector(".texto2")
+let botaoInicial = document.querySelector(".abrir")
+let botaoCancelar = document.querySelector(".cancelar")
+let botaoOk = document.querySelector(".ok")
+let modal = document.querySelector(".modal2")
+let modalP = document.querySelector(".modalP")
+esconder.hidden = true
+ 
+function mostrarModal (html, callback = false){
+    let paragrafoM = document.querySelector(".texto")
+        paragrafoM.textContent = html
+        input.tabIndex = 0
+        input.focus()
+        
+esconder.hidden = false
+}
+ 
+    botaoInicial.addEventListener("click", (event) => 
+    {
+        let html = prompt("qual a mensagem")
+        mostrarModal(html)
+    }
+    )
+ 
+    botaoCancelar.addEventListener("click", (event) => 
+    {
+        esconder.hidden = true
+    }
+    )
+ 
+    botaoOk.addEventListener("click", (event) => 
+    {
+        esconder.hidden = true
+        let texto = input.value
+        callback.textContent = texto
+    }
+    )
+ 
+    modal.addEventListener("keydown", (e) => {
+            console.log(e.key)
+            switch (e.key) {
+                case "Escape": 
+                esconder.hidden = true
+                    break
+            case "Enter":
+            esconder.hidden = true
+                let texto = input.value
+                callback.textContent = texto
+                    break
+            }
+ 
+        })
+ 
+ 
+    </script>
+</body>
