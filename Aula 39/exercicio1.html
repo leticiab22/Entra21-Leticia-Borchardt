@@ -1,98 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8"/>
-        <title>Form validation: Tarefa 1</title>
-        <style>
-            body {    
-                background-color: rgba(120, 211, 211, 0.597);            
-                color: rgb(0, 0, 0);
-                font-size: 18pt;
-                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',  sans-serif;
-            }
 
-            input:invalid {
-                border: 1px solid red;
-            }
-
-        </style>
-    </head>
-
-    <body>
+<head>
+    <meta charset="utf-8" />
+    <title>Form validation: Tarefa 1</title>
     <style>
-           body {                
-                color: #333;
-                font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
-                padding: 1em;
-                margin: 0;
-            }
-
- 
-
-            * {
-                box-sizing: border-box;
-            }
-        </style>
-    </head>
-
- 
-
-    <body>
-    <h2>Envie seu comentário</h2>
-    <form name="frmTeste" method="post" action="#" onsubmit="return validaForm(this);">        
-        <ul>
-            <li>
-                <label for="uname">Nome de usuário</label>
-                <input type="text" name="uname" id="uname" required minlength="5" maxlength="20">
-            </li><br>
-            <li>
-                <label for="email">Email:</label>
-                <input type="text" name="email" id="email" required>
-                
-            </li><br>
-            <li>
-                <label for="phone">Número de telefone: (xxxxx-xxxx)</label>
-                <input pattern="^\d{5}-\d{4}$" type="tel" required maxlength="15">
-            </li><br>
-            <li>
-                <label for="comment">Comentário:</label>
-                <textarea name="comment" id="comment" required maxlength="200"> 
-                </textarea>
-            </li><br>
-            <li>
-                <button>Enviar comentário</button>
-            </li><br>
-        </ul>
-    </form>
-
- 
-
- <script type="text/javascript">
-  let email = document.querySelector("#email")
-
- 
-
-function validaForm() {
-    console.log("teste")
-    if(!email.value.includes("@")  ||
-        !email.value.includes(".")  ||
-      email.value == "" ||
-      email.value == null) {
-           email.setCustomValidity("I expect an e-mail, darling!");
-        email.focus();
-    }}
-
- 
-
-    let botao = document.querySelector("button")
-    botao.addEventListener("click", (event) => validaForm()
-    )
-
- 
-
-       
-    email.oninput = event =>{
-            email.setCustomValidity('')
+        body {
+            background-color: rgba(120, 211, 211, 0.597);
+            color: rgb(0, 0, 0);
+            font-size: 18pt;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
         }
-</script>
-</body>
+
+        input:invalid {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        body {
+            color: #333;
+            font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+            padding: 1em;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    </head>
+    <body>
+        <h2>Envie seu comentário</h2>
+        <form name="frmTeste" method="post" action="#" onsubmit="return validaForm(this);">
+            <ul>
+                <li>
+                    <label for="uname">Nome de usuário</label>
+                    <input type="text" name="uname" id="uname" required minlength="5" maxlength="20">
+                </li><br>
+                <li>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" required>
+
+                </li><br>
+                <li>
+                    <label for="phone">Número de telefone: (xxxxx-xxxx)</label>
+                    <input pattern="^\d{5}-\d{4}$" type="tel" required maxlength="15">
+                </li><br>
+                <li>
+                    <label for="comment">Comentário:</label>
+                    <textarea name="comment" id="comment" required maxlength="200">
+                </textarea>
+                </li><br>
+                <li>
+                    <button>Enviar comentário</button>
+                </li><br>
+            </ul>
+        </form>
+        <script type="text/javascript">
+            let email = document.querySelector("#email")
+
+            function validaForm() {
+                console.log("teste")
+                if (!email.value.includes("@") ||
+                    !email.value.includes(".") ||
+                    email.value == "" ||
+                    email.value == null) {
+                    email.setCustomValidity("Inválido! O email deve conter @ e .");
+                    email.focus();
+                }
+            }
+            let botao = document.querySelector("button")
+            botao.addEventListener("click", (event) => validaForm()
+            )
+            email.oninput = event => {
+                email.setCustomValidity('')
+            }
+        </script>
+    </body>
