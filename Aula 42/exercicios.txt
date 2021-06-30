@@ -1,0 +1,84 @@
+DATE TIME
+
+1- 
+let data = new Date(2012, 1, 20, 3, 12)
+console.log(data)
+
+--------------------------------------------------------------
+
+2- 
+let d = new Date()
+let data = d.getDay()
+
+function obtemDiaSemana(data) {
+    switch (data) {
+        case 0 : 
+        console.log("Domingo")
+        break
+        case 1 : 
+        console.log("Segunda-feira")
+        break
+        case 2 :
+        console.log("Terça-feira")
+        break
+        case 3 : 
+        console.log("Quarta-feira")
+        break
+        case 4 :
+        console.log ("Quinta-feira")
+        break
+        case 5 : 
+        console.log("Sexta-feira")
+        break
+        case 6 :
+        console.log("Sábado")
+        break
+    }
+}
+
+console.log(obtemDiaSemana(data))
+
+----------------------------------------------------------------
+
+3-
+let data = new Date(2012, 1)
+let ultimoDiaMes = new Date(data.getFullYear(), data.getMonth()+1, 0)
+
+console.log(ultimoDiaMes.getDate())
+
+---------------------------------------------------------------
+
+4- 
+function obtemSegundos(){
+
+    let data = new Date()
+    let hr = data.getHours() * 3600
+    let min = data.getMinutes() * 60
+    let seg = data.getSeconds()
+
+    let total = hr + min + seg 
+    console.log(total)
+}
+
+console.log(obtemSegundos())
+
+--------------------------------------------------------------------
+
+5- 
+function segundosParaAmanha(){
+    let data = new Date()
+    console.log(data)
+    
+    let seg = data.getSeconds()
+    let hr = data.getHours() * 3600
+    let min = data.getMinutes() * 60
+    let totalSegundos = min + hr + seg
+    let segundosFaltando = 86400 - totalSegundos
+    console.log(segundosFaltando)
+    }
+segundosParaAmanha()
+
+----------------------------------------------------------------------
+
+6- 
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+
+    <script>
+        /*
+        Escreva a função formataData(data). Ela deve formatar a data
+       da seguinte maneira:
+
+       * Se desde a data passou menos de 1 segundo -> "agora"
+       * Se desde a data passou menos de 1 minuto -> "n segundos atrás" onde n é a quantidade de segundos
+       * Se desde a data passou menos de 1 hora -> "m minutos atrás" onde m é a quantidade de minutos
+       * Nos outros casos a data deve ser apresentada no seguinte formato: "DD.MM.YY HH:mm" 
+         Ex.: 28.06.21 10:00
+
+         Testes:
+         formatDate(new Date(new Date - 1)) // agora
+         formatDate(new Date(new Date - 30 * 1000)) // 30 segundos atras
+         formatDate(new Date(new Date - 5 * 60 * 1000)) // 5 minutos atrás
+       */
+
+        
+        let data = new Date(Date.now())
+        console.log(data)
+
+        let seg = data.getSeconds()
+        let min = data.getMinutes()
+        let hr = data.getHours()
+
+        if (seg < 1){
+            console.log("agora")
+        } 
+         if (min < seg*60){
+            console.log(`${seg} segundos atrás`)
+        }
+        if (hr < min*60) {
+            console.log(`${min} minutos atrás`)
+        }  
+        
+
+
+
+
+       
+        
+
+
+        
+        
+
+
+
+      
+        
+        
+    </script>
+</body>
+</html>
