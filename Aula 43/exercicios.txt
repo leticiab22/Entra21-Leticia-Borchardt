@@ -1,0 +1,36 @@
+---------------------------SET---------------------------------------------
+
+1- 
+let vetor = new Set([1, 2, 2, 3, 3, 4, 5])
+    for (let numero of vetor) {
+        console.log(Array.from(vetor))
+}
+
+------------------------WEB STORAGE----------------------------------------
+
+1-
+let texto = document.querySelector("#texto")
+
+if (!localStorage.getItem("#texto")) {            
+    armazenarTexto()
+} else {
+    modificarTexto()
+}
+
+function armazenarTexto() {
+    localStorage.setItem("#texto", texto.value)
+
+    modificarTexto()
+}
+
+function modificarTexto() {
+    let novoTexto = localStorage.getItem("#texto")
+
+    texto.value = novoTexto
+}
+
+texto.onchange = armazenarTexto
+
+----------------------------------------------
+
+2- 

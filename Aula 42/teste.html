@@ -6,7 +6,7 @@
     <title>Teste</title>
 </head>
 <body>
-
+    <p id="demo"></p>
     <script>
         /*
         Escreva a função formataData(data). Ela deve formatar a data
@@ -25,22 +25,17 @@
        */
 
         
-        let data = new Date(Date.now())
-        console.log(data)
+setInterval(myTimer, 1000);
 
-        let seg = data.getSeconds()
-        let min = data.getMinutes()
-        let hr = data.getHours()
+ 
 
-        if (seg < 1){
-            console.log("agora")
-        } 
-         if (min < seg*60){
-            console.log(`${seg} segundos atrás`)
-        }
-        if (hr < min*60) {
-            console.log(`${min} minutos atrás`)
-        }  
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+
+
+
         
 
 

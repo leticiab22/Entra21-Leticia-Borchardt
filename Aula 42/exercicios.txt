@@ -82,3 +82,56 @@ segundosParaAmanha()
 
 6- 
 
+
+
+
+
+
+
+
+
+
+
+
+
+AGENDANDO FUNCOES
+
+1- 1-setInterval
+
+ function imprimeNumeros2(comeco, fim){
+    let idSetInterval = setInterval(rodaroda, 1000)
+    function rodaroda(){
+        console.log(comeco)
+
+    if (comeco >= fim) {
+        clearInterval (idSetInterval)
+    }
+    comeco++
+    }
+}
+imprimeNumeros2(1, 5)
+
+1- 2- setTimeout
+
+ function imprimeNumeros(comeco, fim){
+    function rodaTimer() {
+        console.log(comeco)
+
+        if (comeco < fim) {
+            setTimeout(rodaTimer, 1000)
+        }
+
+        comeco++
+    }
+
+    rodaTimer()
+}
+
+imprimeNumeros(1, 5)
+
+--------------------------------------------------------------------------
+
+
+
+
+
