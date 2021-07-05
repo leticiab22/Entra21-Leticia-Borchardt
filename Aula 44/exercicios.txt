@@ -1,0 +1,101 @@
+----------------------sintaxe-classes----------------------
+1- 
+
+class Aluno {
+            constructor(matricula, nome, notaP1, notaP2, notaT){
+                this.matricula = matricula
+                this.nome = nome
+                this.notaP1 = notaP1
+                this.notaP2 = notaP2
+                this.notaT = notaT
+            }
+            
+            media(){
+                return ((this.notaP1 * 3) + (this.notaP2 * 3) + (this.notaT * 2)) / 8
+            }
+            final(){
+                let media = this.media()
+ 
+                if (media < 6) {
+                    console.log("reprovado")
+ 
+                } 
+                else {
+                    console.log("aprovado")
+            }
+        }
+}
+ 
+        let aluno1 = new Aluno(01, "Maria", 8, 7, 10)
+        console.log(aluno1.media())
+        console.log(aluno1.final())
+
+---------------------------------------------------------------
+
+2- 
+class Pessoas {
+    constructor(nome, telefone) {
+        this.nome = nome
+        this.telefone = telefone
+    }
+
+}
+
+class Agenda {
+        listaPessoas = []
+    
+
+    armazenaPessoa(pessoa) {
+
+        if (this.listaPessoas.length <= 10) {
+            this.listaPessoas.push(pessoa)
+
+        }
+        else {
+            alert("cancela")
+        }
+    }
+
+    imprimeAgenda() {
+        for (let pessoa of this.listaPessoas) {
+            console.log(`Nome: ${pessoa.nome} | Telefone: ${pessoa.telefone}`)
+        }
+    }
+
+    removePessoa(nome){
+        for (let x = 0; x<(this.listaPessoas.length); x+=1){
+            alert(x)
+            if (nome == this.listaPessoas[x].nome){
+                this.listaPessoas.splice(x,1)
+                return
+            }
+        }
+    }
+
+    buscaPessoa(nome){
+        for (let pessoa of this.listaPessoas){
+            if (nome == pessoa.nome){
+                console.log(`${pessoa.nome} : ${pessoa.telefone}`)
+            }
+        }
+    }
+
+    listarPessoas() {
+        for (let pessoa of this.listaPessoas) {
+            console.log(`Nome: ${pessoa.nome}`)
+        }
+    }
+}
+
+let usuario1 = new Pessoas("joao", "22222")
+let usuario2 = new Pessoas("ana", "22222")
+
+let agenda = new Agenda()
+agenda.armazenaPessoa(usuario1)
+agenda.armazenaPessoa(usuario2)
+
+agenda.imprimeAgenda()
+
+-----------------------------------------------------------------------
+
+3- 

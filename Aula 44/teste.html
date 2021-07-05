@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    <script>
+        /*
+        Exercícios
+
+        1) Escreva a classe Aluno. Cada objeto dessa classe deve guardar os seguintes dados:
+        - matrícula,
+        - nome
+        - 2 notas de prova
+        - 1 nota de trabalho
+
+        Essa classe deve ter 2 métodos:
+        - media: calcula a média final do aluno (cada prova tem peso 3 e o trabalho tem peso 2)
+        - final: calcula quanto o aluno precisa para a prova final (retorna zero se ele não for para a final)*/
+
+
+        class Aluno {
+            constructor(matricula, nome, notaP1, notaP2, notaT){
+                this.matricula = matricula
+                this.nome = nome
+                this.notaP1 = notaP1
+                this.notaP2 = notaP2
+                this.notaT = notaT
+            }
+            get media(){
+                return this.calculaMedia()
+            }
+            calculaMedia(){
+                return console.log((notaP1 * 3) + (notaP2 * 3) + (notaT * 2) / 8)
+            }
+        }
+
+        let aluno1 = new Aluno(01, "Maria", 8, 7, 10)
+
+    </script>
+</body>
+</html>
