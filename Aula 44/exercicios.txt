@@ -2,33 +2,32 @@
 1- 
 
 class Aluno {
-            constructor(matricula, nome, notaP1, notaP2, notaT){
-                this.matricula = matricula
-                this.nome = nome
-                this.notaP1 = notaP1
-                this.notaP2 = notaP2
-                this.notaT = notaT
-            }
-            
-            media(){
-                return ((this.notaP1 * 3) + (this.notaP2 * 3) + (this.notaT * 2)) / 8
-            }
-            final(){
-                let media = this.media()
- 
-                if (media < 6) {
-                    console.log("reprovado")
- 
-                } 
-                else {
-                    console.log("aprovado")
-            }
+    constructor(matricula, nome, notaP1, notaP2, notaT){
+        this.matricula = matricula
+        this.nome = nome
+        this.notaP1 = notaP1
+        this.notaP2 = notaP2
+        this.notaT = notaT
+    }
+    
+    media(){
+        return ((this.notaP1 * 3) + (this.notaP2 * 3) + (this.notaT * 2)) / 8
+    }
+    final(){
+        let media = this.media()
+
+        if (media < 6) {
+            console.log("reprovado")
+
+        } 
+        else {
+            console.log("aprovado")
         }
+    }
 }
- 
-        let aluno1 = new Aluno(01, "Maria", 8, 7, 10)
-        console.log(aluno1.media())
-        console.log(aluno1.final())
+let aluno1 = new Aluno(01, "Maria", 8, 7, 10)
+console.log(aluno1.media())
+console.log(aluno1.final())
 
 ---------------------------------------------------------------
 
@@ -38,18 +37,14 @@ class Pessoas {
         this.nome = nome
         this.telefone = telefone
     }
-
 }
 
 class Agenda {
         listaPessoas = []
-    
 
     armazenaPessoa(pessoa) {
-
         if (this.listaPessoas.length <= 10) {
             this.listaPessoas.push(pessoa)
-
         }
         else {
             alert("cancela")
@@ -89,11 +84,9 @@ class Agenda {
 
 let usuario1 = new Pessoas("joao", "22222")
 let usuario2 = new Pessoas("ana", "22222")
-
 let agenda = new Agenda()
 agenda.armazenaPessoa(usuario1)
 agenda.armazenaPessoa(usuario2)
-
 agenda.imprimeAgenda()
 
 -----------------------------------------------------------------------
