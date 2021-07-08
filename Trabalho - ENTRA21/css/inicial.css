@@ -118,6 +118,7 @@ ul {
     display: block;
     padding-bottom: 130%;
     width: 100%;
+    
   }
   
   .card__background{
@@ -136,13 +137,18 @@ ul {
       filter 200ms linear,
       transform 200ms linear;
   }
+  .card__background:hover{
+    background-color: aquamarine;
+  }
   
   .card:hover .card__background{
     transform: scale(1.05) translateZ(0);
+    
   }
   
   .card-grid:hover > .card:not(:hover) .card__background{
     filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+    
   }
   
   .card__content{
@@ -150,6 +156,7 @@ ul {
     padding: var(--spacing-l);
     position: absolute;
     top: 0;
+    
   }
   
   .card__category{
@@ -165,5 +172,6 @@ ul {
     text-shadow: 2px 2px 20px rgb(118, 80, 233);
     line-height: 1.4;
     word-spacing: 100vw;
+    
   }
 
