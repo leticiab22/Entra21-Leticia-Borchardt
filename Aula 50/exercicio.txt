@@ -1,0 +1,49 @@
+callbacks -------------
+
+1- 
+let n1 = +prompt("digite um numero");
+let n2 = +prompt("digite um numero");
+ 
+function somar(n1, n2, cb) {
+let resultado = n1 + n2;
+    if (resultado % 2 === 0) {
+    return cb(new Error("O valor eh impar"))
+    } 
+    return cb(null, resultado)
+}
+
+function callback(error, result) {
+    if (error){
+        return console.log("A operação falhou! [mensagem do erro]")
+    }
+    console.log("A operação foi bem sucedida! O número [result] é par")
+}
+
+somar(n1, n2, cb)
+
+
+------------------------------------------------------------------------------------------
+
+2- 
+dobrarEm5Segundos(prompt("digite um numero"), callback)
+function dobrarEm5Segundos(numero, cb){
+    setTimeout(() => {
+        if (isNaN(numero)==true){
+            let erro = new Error ("o numero é invalido")
+            return cb(erro)
+        }
+        let dobro = parseFloat(numero) * 2
+        cb(null, dobro)
+    }, 5000)
+}
+function callback(error, result){
+    if (error){
+        return console.log(`A operação falhou! ${error.message}`)
+    }
+    return console.log(`A operação foi bem sucedida! O resultado é ${result}`)
+}
+
+
+----------------PROMISES------------------------------------------------------------------
+
+
