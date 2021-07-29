@@ -1,0 +1,19 @@
+{
+  "name": "moduloses6",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Como usar os módulos ES6 no node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Letícia Borchardt",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
