@@ -1,0 +1,171 @@
+@import url(fontawesome-all.min.css);
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+
+
+html{
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: #a2a2a2;
+    font-weight: 400;
+    line-height: 1.6;
+    justify-content: center;
+    text-decoration: none;
+
+}
+.main {
+    padding: 36px 24px 4px;
+}
+
+header{
+    background-image: url(img/imgHeader.jpg);
+    background-position: left, center, top, center;
+    width: auto;
+    padding: 4.5em 1.5em;
+    text-align: center;
+    background-size: auto, cover;         
+    background-repeat: no-repeat;
+}
+
+header img {
+    border-radius: 100%;
+}
+
+header h1 {
+    color: #FFFFFF80;
+    text-align: center;
+    font-size: 21px;
+}
+
+header strong {
+    color: white;
+}
+
+header a{
+    color: #FFFFFF80;
+    text-decoration:none;
+    border-bottom: dotted 1px;
+}
+
+.one h2 {
+    color: #787878;
+}
+
+.botao {
+	background-color: transparent;
+    box-shadow: inset 0 0 0 1px #dddddd;
+    color: #636363;
+	border-radius: 8px;
+    height: 2.75em;
+    line-height: 2.75em;
+    padding: 0 1.5em;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+}
+
+
+.botao1 {
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: #a2a2a2;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+hr {
+    color:#dddddd;
+    opacity: 50%;
+}
+
+
+.galeria{
+    justify-content: center;
+
+}
+
+img {
+    justify-content: center;
+    position: relative;
+    border-radius: 0.35em;
+    max-width: 100%;
+}
+
+input, textarea{
+    background-color: #f7f7f7;
+    border-radius: 0.35em;
+    border: solid 2px transparent;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: #a2a2a2; 
+    padding: 0.75em;
+    width: 100%;
+}
+
+
+.endereco a{
+    text-decoration: none;
+    color: #a2a2a2;
+    border-bottom: dotted 1px;
+}
+
+
+footer{
+    background-image: url(img/imgHeader.jpg);
+    background-position-x: left, center;
+    background-position-y: bottom;
+    text-decoration: none;
+    color: #a2a2a2;
+    padding: 2.25em 1.5em;
+    text-align: center;
+    line-height: 2.75em;
+    font-size: 12px;
+    align-content: center;
+}
+
+.icons a {
+    font-size: 3em;
+    color: #A2A2A2;
+    text-decoration: none;
+    padding-left: 12px;
+    
+}
+
+.copyright a{
+    text-decoration: none;
+    color: #a2a2a2;
+    border-bottom: dotted 1px;
+}
+
+@media screen and (min-width: 481px) {
+    .botao{
+        align-content: flex-start;
+        width: 8em;
+    }
+    .galeria{
+        font-size: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        
+    }
+    .dados {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    }
+    textarea {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    header{
+        justify-content: left;
+        position: fixed;
+        width: 25%;
+        height: 100%;
+        text-align: right;
+    }
+    header h1 {
+        text-align: right;
+    }
+}
