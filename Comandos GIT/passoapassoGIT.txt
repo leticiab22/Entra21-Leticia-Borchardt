@@ -1,0 +1,35 @@
+GIT PASSO A PASSO
+
+- criar pasta;
+- adicionar arquivo README.md
+- abrir terminal - 
+
+	git init
+	git config --global user.name "leticia"
+	git config --global user.email "oi@gmail.com"
+	git status
+	git add . 
+	git commit -m "Commit Inicial"
+	
+- abrir git hub - criar novo repositório
+	
+	git branch -M main
+	git remote add origin <url>
+	git push -u origin main
+
+pronto :)
+
+
+criar branch:
+
+	git branch bug/1
+	git checkout bug/1 (troca o branch)
+	git reset <hash> --hard   (para voltar ao anterior)
+	git push origin bug/1
+
+git checkout -b features/1
+	
+criar um pull request no git hub
+
+oi
+
