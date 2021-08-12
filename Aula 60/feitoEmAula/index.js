@@ -1,6 +1,9 @@
 const { Pool } = require("pg");
 const format = require("pg-format");
 
+const connectionString = "postgres://postgres:123456@localhost:5432/node";
+const pool = new Pool
+
 
 const pool = new Pool({
     host: "localhost",
