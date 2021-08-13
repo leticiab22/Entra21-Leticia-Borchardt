@@ -12,7 +12,7 @@ const format = require("pg-format");
         telefone text NOT NULL UNIQUE,
         numero_documento text NOT NULL UNIQUE,
         tipo_pessoa text NOT NULL,
-        pontos integer NOT NULL
+        pontos integer 
     );
 
     CREATE TABLE IF NOT EXISTS enderecos (
@@ -43,8 +43,9 @@ const format = require("pg-format");
     CREATE TABLE IF NOT EXISTS compras (
         id_cliente uuid NOT NULL REFERENCES clientes,
         id_livro uuid NOT NULL REFERENCES livros,
-        data date NOT NULL,
-        valor numeric NOT NULL
+        data timestamp DEFAULT NOW(),
+        valor numeric NOT NULL,
+        PRIMARY KEY (id_cliente, id_livro, data)
     );`);
     
         console.log("Tabelas criadas com sucesso!");
