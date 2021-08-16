@@ -1,7 +1,26 @@
 const db = require("./db");
 const format = require("pg-format");
 
+/*
+3) Crie uma função insereCliente(cliente) que recebe o objeto cliente:
+{
+    nome,
+    email,
+    telefone,
+    numero_documento,
+    tipo_pessoa,
+    rua,
+    numero,
+    cidade,
+    estado,
+    cep
+}
 
+E insere esse objeto como um registro no banco de dados. 
+(Deve inserir o registro na tabela clientes e na tabela enderecos).
+
+Utilize essa função para criar 1 cliente.
+*/
 
 let cliente = {nome:"Anna Júlia",email:"ana@email.com",telefone:"(47) 9 3333-2222",numero_documento:"123.456.789-10",tipo_pessoa:"PF",rua:"Ruazinha",numero:123,cidade:"Indaial",estado:"SC",cep:"1234"};
 

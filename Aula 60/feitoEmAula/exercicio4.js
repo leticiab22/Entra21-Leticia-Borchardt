@@ -1,8 +1,16 @@
 const format = require("pg-format");
 const db = require("./db");
 
+/*
+4) Crie uma função insereClientes(clientes) que recebe um vetor de clientes
+e insere esses clientes no banco de dados.
+(Deve inserir o registro na tabela clientes e na tabela enderecos).
+
+Utilize essa função para criar 4 clientes.
+*/
+
+
 async function insereClientes(clientes) {
-    // Separando clientes
     const clientesVetor = [],
           enderecosVetor = [];
     

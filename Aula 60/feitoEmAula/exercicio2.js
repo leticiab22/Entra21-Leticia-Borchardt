@@ -1,6 +1,17 @@
 const db = require("./db");
 const format = require("pg-format");
 
+/*
+2) Faça um script que crie as seguintes tabelas no banco de dados:
+
+clientes(id, nome, email, telefone, numero_documento, tipo_pessoa, pontos)
+enderecos(id, rua, numero, cidade, estado, cep, id_cliente)
+livros(isbn, nome_autor, assunto, quantidade_estoque, preco, id_editora)
+compras(id_cliente, id_livro, data, valor)
+editoras(id, nome_gerente, telefone)
+
+Os identificadores devem ser do tipo UUID 
+*/
 
 (async () => {
     try {
