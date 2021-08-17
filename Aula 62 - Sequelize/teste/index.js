@@ -1,128 +1,114 @@
+const { Op } = require("sequelize");
 const sequelize = require("./database");
-const { Usuario, Projeto, Endereco } = sequelize.models;
+const { Usuario, Projeto } = sequelize.models;
 
 (async () => {
     try {
         // Criando todas as tabelas
         await sequelize.sync({ force: true });
-        console.log("Tabela criada com sucesso!");
 
+        await Usuario.bulkCreate([
+            {
+                nome: "William",
+                email: "william@email.com",
+                senha: "123456"
+            },
+            {
+                nome: "João",
+                email: "joao@email.com",
+                senha: "123456"
+            },
+            {
+                nome: "José",
+                email: "jose@email.com",
+                senha: "123456"
+            },
+            {
+                nome: "Lucas",
+                email: "lucas@email.com",
+                senha: "123456"
+            }
+        ]);
+        console.log("Usuários criados com sucesso!");
 
-        // Criando a tabela Usuarios
-        // await Usuario.sync({ force: true });
+        // Obtendo todos os usuários
+        const usuarios = await Usuario.findAll();
 
+        console.log(JSON.stringify(usuarios, null, 4));
 
-        // Inserindo um usuário
-        const pedro = await Usuario.create({
-            nome: "Pedro",
-            email: "pedro@email.com",
-            senha: "123456"
+        // Especificando os atributos
+        const nomeUsuarios = await Usuario.findAll({
+            attributes: [["nome", "nome_usuario"]]
+        });
+                        
+        console.log(JSON.stringify(nomeUsuarios, null, 4));
+
+        // Cláusula WHERE
+        const nomesComJ = await Usuario.findAll({
+            where: {
+                nome: {
+                    [Op.iLike]: "j%"
+                }                
+            }
         });
 
-        console.log(pedro.checarSenha("1234"));
-        console.log("Usuário criado com sucesso!");
-        // // console.log(pedro.toJSON());
+        console.log(JSON.stringify(nomesComJ, null, 4));
 
+        // Nomes com mais de 4 caracteres
+        const nomes = await Usuario.findAll({
+            where: sequelize.where(sequelize.fn("char_length", sequelize.col("nome")), {
+                [Op.gt]: 4
+            })
+        });
 
+        console.log(JSON.stringify(nomes, null, 4));
 
-        // Criando um projeto
-        const projeto = await Projeto.create({
-            nome: 'Projeto Verão 2021',
-            quantidadeHoras: 60
-        })
-        console.log('Projeto criado com sucesso!');
+        // Checando a senha
+        const lucas = await Usuario.findOne({
+            where: {
+                nome: "Lucas"
+            }
+        });
 
-        await projeto.addUsuario(pedro)
-        console.log('Pedro adicionado com sucesso!');
-        // await projeto.removeUsuario(pedro)
+        console.log(lucas.checarSenha("12345"));
 
+        // Criando um endereço para o Lucas
 
-
-        // Criando um endereco
-        await Endereco.create({
-            rua: "Rua 01",
-            numero: 123,
-            idUsuario: pedro.id
-        })
-        console.log('Endereço criado com sucesso!');
-
-
-        // await pedro.createEndereco({
+        // await Endereco.create({
         //     rua: "Rua 01",
-        //     numero: 123 
-        // })
-        // console.log('Endereço criado com sucesso!');
-
-
-        // Modificar o pedro
-        pedro.email = "pedrao@email.com";
-        await pedro.save();
-        console.log("E-mail do pedro atualizado!");
-
-
-        // Remover o pedro
-        // await pedro.destroy();
-        // console.log("Pedro foi removido do banco de dados");
-
-
-
-        // // Inserindo vários usuários
-        // const usuarios = await Usuario.bulkCreate([
-        // {
-        // nome: "Pedro",
-        // email: "pedro@email.com",
-        // senha: "123456"
-        // },
-        // {
-        // nome: "Paulo",
-        // email: "paulo@email.com",
-        // senha: "123456"
-        // },
-        // {
-        // nome: "José",
-        // email: "jose@email.com",
-        // senha: "123456"
-        // }
-        // ]);
-        // console.log("Usuários inseridos com sucesso!");
-        // usuarios.forEach(usuario => console.log(usuario.toJSON()));
-
-
-
-        // // Comparando a senha
-        // console.log(compareSync("12346", usuarios[0].toJSON().senha));
-
-
-
-        // // Selecionando registros
-        // const todosUsuarios = await Usuario.findAll({
-        // where: {
-        // nome: {
-        // [Op.iLike]: "p%"
-        // }
-        // }
+        //     numero: 100,
+        //     usuarioId: lucas.id
         // });
+        await lucas.createEndereco({
+            rua: "Rua 01",
+            numero: 100
+        });
+    
+        console.log("Endereço do Lucas criado");
 
-        // for (let usuario of todosUsuarios) {
-        // console.log(usuario.toJSON());
-        // }
+        // Criando um projeto para o Lucas   
+        await lucas.createProjeto({
+            nome: "Projeto Verão 2021",
+            quantidadeHoras: 32
+        });
+        console.log("Projeto do lucas criado com sucesso!");
 
+        const projeto = await Projeto.findOne({
+            where: {
+                nome: "Projeto Verão 2021"
+            }
+        });
 
-        // // Selecionando apenas um registro
-        // const paulo = await Usuario.findOne({
-        // where: {
-        // nome: "Paulo"
-        // }
-        // });
+        const jose = await Usuario.findOne({
+            where: {
+                nome: "José"
+            }
+        });        
 
-
-        // console.log(paulo.toJSON());
-
-        // const jose = await Usuario.findByPk("5be8d3bd-2b90-42b0-a46a-6cee565f5537");
-        // console.log(jose.toJSON());
-
-    } catch (err) {
-        console.error("Ocorreu algum erro ao criar a tabela", err);
+        await projeto.addUsuario(jose);
+        console.log("José foi adicionado no projeto");
+    } catch (error) {
+        console.log(error);
     } finally {
         sequelize.close();
     }
