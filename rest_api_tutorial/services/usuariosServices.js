@@ -1,13 +1,11 @@
 const { Usuario } = require("../db/models");
-
+const createError = require("http-errors");
 
 
 async function getUsuarios() {
     const usuarios = await Usuario.findAll();
 
-
-
-    res.json(usuarios);
+    return usuarios;
 };
 
 
@@ -15,44 +13,57 @@ async function getUsuarios() {
 async function getUsuario(id) {
     const usuario = await Usuario.findOne({
         where: {
-            id: req.params.id
+            id
         }
     });
+    if (!usuario) {
+        throw new createError(404, "Usuário não encontrado!");
+    }
+    return usuario;
+}
 
+
+async function createUsuario(novoUsuario) {
+    const [usuario, criadoAgora] = await Usuario.findOrCreate({
+        where: { email: novoUsuario.email },
+        defaults: novoUsuario
+    });
+
+    if (!criadoAgora) throw new createError(409, "Usuário já está cadastrado!");
+
+    return usuario;
+}
+
+
+async function updateUsuario(id, usuarioAtualizado) {
+    const usuario = await Usuario.findOne({ where: { id } });
 
 
     if (!usuario) {
-        return res.status(404).json({ message: "Usuário não foi encontrado!" });
+        throw new createError(404, "Usuário não existe!");
     }
 
 
+    Object.assign(usuario, usuarioAtualizado);
 
-    res.json(usuario);
-}
+    await usuario.save();
 
-
-
-async function createUsuario(usuario) {
-
-
-
-}
-
-
-
-async function updateUsuario(usuarioAtualizado) {
-
-
-
+    return usuario;
 }
 
 
 
 async function removeUsuario(id) {
+    const usuario = await Usuario.findOne({
+        where: {
+            id
+        }
+    });
 
+    if (!usuario) throw new createError(404, "Usuário não existe!")
 
-
-}
+    await usuario.destroy();
+};
 
 
 

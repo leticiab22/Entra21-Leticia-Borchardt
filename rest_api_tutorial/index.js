@@ -1,11 +1,24 @@
 const express = require("express");
+const helmet = require("helmet");
+const morgan = require("morgan");
+const cors = require("cors");
 const app = express();
-const usuariosRoutes = require("./routes/usuariosRoutes")
+const usuariosRoutes = require("./routes/usuariosRoutes");
+
+
 
 const porta = 3000;
 
+
+
 app.use(express.json());
-app.use("/usuarios", usuariosRoutes);
+app.use(morgan("dev"));
+app.use(helmet());
+app.use(cors({
+    origin:"http://127.0.0.1:5500"
+}));
+app.use("/usuarios", usuariosRoutes)
+
 
 
 app.get("/", (req, res) => {
@@ -13,9 +26,11 @@ app.get("/", (req, res) => {
 });
 
 
+
 app.post("/", (req, res) => {
     res.send("post endpoint");
 });
+
 
 
 app.put("/", (req, res) => {
@@ -23,9 +38,21 @@ app.put("/", (req, res) => {
 });
 
 
+
 app.delete("/", (req, res) => {
     res.send("delete endpoint");
 });
+
+
+
+
+// Middleware de tratamento de erros
+app.use((error, req, res, next) => {
+    res.status(error.status);
+    res.json({ message: error.message });
+});
+
+
 
 
 app.listen(porta, () => {

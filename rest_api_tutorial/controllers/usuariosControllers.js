@@ -7,7 +7,6 @@ async function getAll(req, res, next) {
         const usuarios = await usuariosServices.getUsuarios();
 
 
-
         res.json(usuarios);
     } catch (err) {
         console.log(err);
@@ -17,11 +16,9 @@ async function getAll(req, res, next) {
 
 
 
-async function getOne() {
+async function getOne(req, res, next) {
     try {
-        const usuarios = await usuariosServices.getUsuarios();
-
-
+        const usuarios = await usuariosServices.getUsuario(req.params.id);
 
         res.json(usuarios);
     } catch (err) {
@@ -32,13 +29,11 @@ async function getOne() {
 
 
 
-async function create() {
+async function create(req, res, next) {
     try {
-        const usuarios = await usuariosServices.getUsuarios();
+        const usuario = await usuariosServices.createUsuario(req.body);
 
-
-
-        res.json(usuarios);
+        res.json(usuario);
     } catch (err) {
         console.log(err);
         next(err);
@@ -47,34 +42,27 @@ async function create() {
 
 
 
-async function update() {
+async function remove(req, res, next) {
     try {
-        const usuarios = await usuariosServices.getUsuarios();
+        await usuariosServices.removeUsuario(req.params.id);
 
-
-
-        res.json(usuarios);
+        res.status(204).end();
     } catch (err) {
         console.log(err);
         next(err);
     }
 }
 
-
-
-async function remove() {
+async function update(req, res, next) {
     try {
-        const usuarios = await usuariosServices.getUsuarios();
+        const usuario = await usuariosServices.updateUsuario(req.params.id, req.body);
 
-
-
-        res.json(usuarios);
+        res.json(usuario);
     } catch (err) {
         console.log(err);
         next(err);
     }
 }
-
 
 
 module.exports = {
