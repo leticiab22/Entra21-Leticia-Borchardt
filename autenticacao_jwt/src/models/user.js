@@ -45,6 +45,13 @@ module.exports = (sequelize, DataTypes) => {
       set(password) {
         this.setDataValue("password", bcrypt.hashSync(password, 10));
       }
+    },
+    role: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isIn: [["admin", "user"]]
+      }
     }
   }, {
     sequelize,
