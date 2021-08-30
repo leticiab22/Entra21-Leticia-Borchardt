@@ -1,8 +1,11 @@
+import "./styles.css";
+
 export function PrimeiroComponente(){
+    const mensagem = ":)";
     return (
         <>
             <h2>Primeiro Componente</h2>
-            <p>:D</p>
+            <p className="emoji">{ mensagem }</p>
         </>
     );
 }
